@@ -5,20 +5,28 @@ application up and running.
 
 Things you may want to cover:
 
-- Ruby version = **Ruby v3.0.2**
+## Ruby version
 
-- System dependencies = **rspec-rails, capybara and all rails stuff**
+- Ruby v3.0.2
 
-- Configuration
+## System dependencies
 
-- Database creation
+- rspec-rails;
+- capybara;
+- all rails stuff;
 
-- Database initialization
+## Configuration
 
-- How to run the test suite = **rspec**
+## Database creation
 
-- Services (job queues, cache servers, search engines, etc.)
+## Database initialization
 
-- Deployment instructions
+## How to run the test suite
 
-- ...
+- rspec
+
+## Services (job queues, cache servers, search engines, etc.)
+
+## Deployment instructions
+
+## ...
