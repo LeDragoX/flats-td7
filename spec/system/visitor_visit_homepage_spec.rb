@@ -57,7 +57,7 @@ describe 'Visitor visit homepage' do
     expect(page).to have_text("Banheiros: 2")
     expect(page).to have_text("Aceita Pets: Sim")
     expect(page).to have_text("Estacionamento: Sim")
-    expect(page).to have_text("Diária: R$ 500")
+    expect(page).to have_text("Diária: R$ 500,00")
 
   end
 end
