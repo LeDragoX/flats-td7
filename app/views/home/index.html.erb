@@ -1,6 +1,11 @@
 <h1>Flats</h1>
 <h3>Boas vindas ao sistema de locação de apartamentos</h3>
 
+<nav>
+    <%= link_to 'Cadastrar Imóvel', new_property_path %>
+    <hr>
+</nav>
+
 <% if @properties.empty? %>
     <div><span>Nenhum imóvel disponível</span></div>
 <% end %>
@@ -9,4 +14,5 @@
     <%= link_to(p.title, property_path(p.id)) %>
     <%= p.description %>
     Quartos: <%= p.rooms %>
+    <br>
 <% end %>
