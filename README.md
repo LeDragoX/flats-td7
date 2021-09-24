@@ -63,6 +63,9 @@ rails generate model property title description rooms:integer
 
 # Add columns #
 rails generate migration add_fields_to_properties parking_slot:boolean bathrooms:integer pets:boolean daily_rate:integer
+
+# Add foreign key #
+rails g migration add_property_type_ref_to_property property_type:references
 ```
 
 </details>
