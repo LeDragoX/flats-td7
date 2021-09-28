@@ -1,0 +1,23 @@
+<header>
+    <h1>Imóveis do tipo <%= @property_type.name %></h1>
+
+    <nav>
+        <%= link_to('Voltar', root_path) %>
+        <hr>
+    </nav>
+</header>
+
+<main>
+    <h2>Imóveis Disponíveis</h2>
+    <% if @property_type.properties.empty? %>
+        <div><span>Nenhum imóvel disponível</span></div>
+    <% end %>
+
+    <% @property_type.properties.each do |p| %>
+        <%# Partial Views %>
+        <%= link_to(p.title, property_path(p.id)) %>
+        <%= p.description %>
+        Quartos: <%= p.rooms %>
+        <br>
+    <% end %>
+</main>

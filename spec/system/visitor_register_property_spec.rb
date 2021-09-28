@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 describe 'Visitor register property' do
-   it 'Successfully' do
-    #Arrange
+   it 'successfully' do
+    # ARRANGE
     PropertyType.create!(name: 'Casa') # ! Melhor explodir no teste do que em produção
 
-    #Act
+    # ACT
     visit root_path
     click_on 'Cadastrar Imóvel'
 
@@ -19,7 +19,7 @@ describe 'Visitor register property' do
     check 'Vaga de Estacionamento'
     click_on 'Enviar'
 
-    #Assert
+    # ASSERT
     expect(page).to have_content("Casa em Florianópolis")
     expect(page).to have_content("Ótima casa perto da UFSC")
     expect(page).to have_content("Quartos: 3")
@@ -31,21 +31,15 @@ describe 'Visitor register property' do
    end 
 
    it "must fill all fields" do
-      #Arrange
+      # ARRANGE
 
-      #Act
+      # ACT
       visit root_path
       click_on 'Cadastrar Imóvel'      
       click_on 'Enviar'
 
-      # Assert
+      # ASSERT
       expect(page).to have_content('não pode ficar em branco') 
-
-      # expect(page).to have_content('Título não pode ficar em branco') 
-      # expect(page).to have_content('Descrição não pode ficar em branco') 
-      # expect(page).to have_content('Quartos não pode ficar em branco') 
-      # expect(page).to have_content('Banheiros não pode ficar em branco') 
-      # expect(page).to have_content('Diária não pode ficar em branco')
 
       # TODO: verificar que rooms, daily_rate e bathrooms são numéricos
       # TODO: verificar que rooms, daily_rate e bathrooms são maiores que zero
