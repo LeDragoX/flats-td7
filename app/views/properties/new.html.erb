@@ -43,6 +43,13 @@
         <% end %>
     </div>
     <div>
+        <%= f.label :property_type_id, "Tipo" %>
+        <%= f.collection_select :property_type_id, PropertyType.all, :id, :name, prompt: 'Escolha um Tipo' %>
+        <% @property.errors.full_messages_for(:property_type_id).each do |message| %>
+            <div class="form-error"><%= message %></div>
+        <% end %>
+    </div>
+    <div>
         <%= f.check_box :pets %>
         <%= f.label :pets, "Aceita Pets" %>
         <% @property.errors.full_messages_for(:pets).each do |message| %>

@@ -12,11 +12,15 @@
     <h2><%= @property.description %></h2>
 
     <dl>
+
+        <dt>Tipo: </dt>
+        <dd><%= @property.property_type.name %></dd>
+
         <dt>Quartos: </dt>
         <dd><%= @property.rooms %></dd>
 
         <dt>Banheiros: </dt>
-        <dd><%= @property.bathrooms %> </dd>
+        <dd><%= @property.bathrooms %></dd>
 
         <dt>Aceita Pets: </dt>
         <% if @property.pets? %>

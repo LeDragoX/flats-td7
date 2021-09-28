@@ -13,7 +13,6 @@ class PropertiesController < ApplicationController
         if @property.save
             redirect_to @property
         else
-            flash[:alert] = "Todos campos devem ser preenchidos"
             render :new
         end
     end
@@ -21,7 +20,9 @@ class PropertiesController < ApplicationController
     private
 
     def property_params
-        params.require(:property).permit(:title, :description, :rooms, :parking_slot, :bathrooms, :pets, :daily_rate)
+        params.require(:property).permit(:title, :description, :rooms,
+                                         :parking_slot, :bathrooms, :pets,
+                                         :daily_rate, :property_type_id)
     end
 
 end

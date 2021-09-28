@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'Visitor register property' do
    it 'Successfully' do
     #Arrange
+    PropertyType.create!(name: 'Casa') # ! Melhor explodir no teste do que em produção
 
     #Act
     visit root_path
@@ -13,6 +14,7 @@ describe 'Visitor register property' do
     fill_in 'Quartos', with: '3'
     fill_in 'Banheiros', with: '2'
     fill_in 'Diária', with: 200
+    select 'Casa', from: 'Tipo'
     check 'Aceita Pets'
     check 'Vaga de Estacionamento'
     click_on 'Enviar'
@@ -25,6 +27,7 @@ describe 'Visitor register property' do
     expect(page).to have_content("Aceita Pets: Sim")
     expect(page).to have_content("Estacionamento: Sim")
     expect(page).to have_content("Diária: R$ 200,00")
+    expect(page).to have_content("Tipo: Casa")
    end 
 
    it "must fill all fields" do
