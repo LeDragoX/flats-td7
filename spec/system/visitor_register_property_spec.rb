@@ -39,7 +39,7 @@ describe 'Visitor register property' do
       click_on 'Enviar'
 
       # ASSERT
-      expect(page).to have_content('não pode ficar em branco') 
+      expect(page).to have_content('não pode ficar em branco', count: 6) 
 
       # TODO: verificar que rooms, daily_rate e bathrooms são numéricos
       # TODO: verificar que rooms, daily_rate e bathrooms são maiores que zero
