@@ -20,3 +20,7 @@ Property.create!({ title: 'Cobertura em Manaus',
                    rooms: 5, bathrooms: 5, daily_rate: 150, pets: false,
                    property_type: apt
                 })
+
+PropertyOwner.create!({ email: 'test@flats.com',
+                        password: '123456'
+                     })

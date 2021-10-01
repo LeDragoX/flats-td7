@@ -11,6 +11,23 @@
   </head>
 
   <body>
+    <nav>
+      <% if property_owner_signed_in? %>
+        <p><%= current_property_owner.email %></p>
+        <p><%= link_to('Logout', destroy_property_owner_session_path, method: :delete) %></p>
+        <div>
+            <nav>
+                <%= link_to 'Cadastrar Imóvel', new_property_path %><br>
+                <%= link_to 'Cadastrar Tipo de Imóvel', new_property_type_path %>
+                <hr>
+            </nav>
+        </div>
+      <% else %>
+        <p><%= link_to('Entrar', new_property_owner_session_path) %></p>
+      <% end %>
+    </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
