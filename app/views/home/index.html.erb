@@ -4,7 +4,8 @@
 
     <div>
         <nav>
-            <%= link_to 'Cadastrar Imóvel', new_property_path %>
+            <%= link_to 'Cadastrar Imóvel', new_property_path %><br>
+            <%= link_to 'Cadastrar Tipo de Imóvel', new_property_type_path %>
             <hr>
         </nav>
     </div>
@@ -23,12 +24,26 @@
         <% if @properties.empty? %>
             <div><span>Nenhum imóvel disponível</span></div>
         <% end %>
-
-        <% @properties.each do |p| %>
-            <%= link_to(p.title, property_path(p.id)) %>
-            <%= p.description %>
-            Quartos: <%= p.rooms %>
-            <br>
-        <% end %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Quartos</th>
+                    <th colspan="2">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @properties.each do |p| %>
+                    <tr>
+                        <td><%= link_to(p.title, property_path(p.id)) %></td>
+                        <td><%= p.description %></td>
+                        <td>Quartos: <%= p.rooms %></td>
+                        <td>Editar</td>
+                        <td>Deletar</td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
     </section>
 </main>

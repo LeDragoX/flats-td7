@@ -2,7 +2,7 @@
 pt-BR:
   activerecord:
     models:
-      property: "Propriedade"
+      property: "Imóvel"
     attributes:
       property:
         title: "Título"
