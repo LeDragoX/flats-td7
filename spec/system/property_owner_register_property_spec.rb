@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Visitor register property' do
+describe 'Property Owner register property' do
    it 'successfully' do
     # ARRANGE
     PropertyType.create!(name: 'Casa') # ! Melhor explodir no teste do que em produção
