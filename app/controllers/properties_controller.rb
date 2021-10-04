@@ -11,6 +11,7 @@ class PropertiesController < ApplicationController
 
     def create
         @property = Property.new(property_params)
+        @property.property_owner = current_property_owner
 
         if @property.save
             redirect_to @property
@@ -19,6 +20,10 @@ class PropertiesController < ApplicationController
         end
     end
 
+    def my_properties
+        @properties = current_property_owner.properties
+    end
+    
     private
 
     def property_params

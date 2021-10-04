@@ -17,6 +17,7 @@
         <p><%= link_to('Logout', destroy_property_owner_session_path, method: :delete) %></p>
         <div>
             <nav>
+                <%= link_to 'Meus Imóveis', my_properties_properties_path %><br>
                 <%= link_to 'Cadastrar Imóvel', new_property_path %><br>
                 <%= link_to 'Cadastrar Tipo de Imóvel', new_property_type_path %>
                 <hr>

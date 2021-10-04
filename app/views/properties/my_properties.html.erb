@@ -1,0 +1,40 @@
+<header>
+    <h1>Meus Imóveis</h1>
+
+    <nav>
+        <%= link_to('Voltar', root_path)%>
+        <hr>
+    </nav>
+</header>
+
+<main>
+    <div>
+        <% if @properties.empty? %>
+            <div>
+                <span>Você ainda não cadastrou imóveis</span>
+                <%= link_to("Cadastre seu primeiro imóvel agora", new_property_path) %>
+            </div>
+        <% end %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Quartos</th>
+                    <th colspan="2">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @properties.each do |p| %>
+                    <tr>
+                        <td><%= link_to(p.title, property_path(p.id)) %></td>
+                        <td><%= p.description %></td>
+                        <td>Quartos: <%= p.rooms %></td>
+                        <td>Editar</td>
+                        <td>Deletar</td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</main>

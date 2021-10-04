@@ -18,18 +18,19 @@ describe "Visitor filter properties by Type" do
     
     it 'sucessfully' do
         # ARRANGE
+        keanu = PropertyOwner.create!(email: 'keanu@reeves.com', password: '123456789')
         apartamento = PropertyType.create!(name: 'Apartamento')
         casa = PropertyType.create!(name: 'Casa')
 
         Property.create!({ title: 'Cobertura em Manaus',
                            description: 'Cobertura de 300m2, churrasqueira e sauna privativa',
                            rooms: 5, bathrooms: 5, daily_rate: 150, pets: false,
-                           property_type: apartamento
+                           property_type: apartamento, property_owner: keanu
                         })
         Property.create!({ title: 'Casa com quintal em Copacabana',
                            description: 'Excelente casa, recém reformada com 2 vagas de garagem',
                            rooms: 3, bathrooms: 3, daily_rate: 300, pets: true,
-                           property_type: casa
+                           property_type: casa, property_owner: keanu
                         })
     
         # ACT

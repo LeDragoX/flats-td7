@@ -3,8 +3,8 @@ require 'rails_helper'
 describe 'Property Owner register property' do
    it 'successfully' do
     # ARRANGE
-    PropertyType.create!(name: 'Casa') # ! Melhor explodir no teste do que em produção
     property_owner = PropertyOwner.create!(email: 'john@doe.com', password: '123456789')
+    PropertyType.create!(name: 'Casa') # ! Melhor explodir no teste do que em produção
     
     # ACT
     login_as(property_owner, scope: :property_owner)
@@ -30,6 +30,7 @@ describe 'Property Owner register property' do
     expect(page).to have_content("Estacionamento: Sim")
     expect(page).to have_content("Diária: R$ 200,00")
     expect(page).to have_content("Tipo: Casa")
+    expect(page).to have_content("Imóvel de: #{property_owner.email}")
    end 
 
    it "must fill all fields" do
