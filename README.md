@@ -66,6 +66,13 @@ rails generate migration add_fields_to_properties parking_slot:boolean bathrooms
 
 # Add foreign key #
 rails g migration add_property_type_ref_to_property property_type:references
+
+### Devise ###
+# Generate a model #
+rails generate devise user
+
+# Expose the devise views per model # Look: https://github.com/heartcombo/devise/wiki/How-to-Setup-Multiple-Devise-User-Models#3-if-you-want-scoped-views
+rails g devise:views users
 ```
 
 </details>

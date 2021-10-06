@@ -12,7 +12,9 @@ sitio = PropertyType.create!(name: 'Sítio')
 
 john = PropertyOwner.create!(email: 'john@doe.com', password: '123456789')
 keanu = PropertyOwner.create!(email: 'keanu@reeves.com', password: '123456789')
-test = PropertyOwner.create!({ email: 'test@flats.com', password: '123456' })
+po_test = PropertyOwner.create!({ email: 'po@test.com', password: '123456' })
+
+user_test = User.create!({ email: 'user@test.com', password: '123456' })
 
 Property.create!({ title: 'Casa com quintal em Morumbi',
                    description: 'Excelente casa, com direito a área Gourmet e uma bela vista',
@@ -28,12 +30,12 @@ Property.create!({ title: 'Casa com piscina em Porto Alegre',
 Property.create!({ title: 'Casa com quintal em Copacabana',
                    description: 'Excelente casa, recém reformada com 2 vagas de garagem',
                    rooms: 3, bathrooms: 3, daily_rate: 300, pets: true,
-                   property_type: house, property_owner: test
+                   property_type: house, property_owner: po_test
                 })
 
 Property.create!({ title: 'Cobertura em Manaus',
                    description: 'Cobertura de 300m2, churrasqueira e sauna privativa',
                    rooms: 5, bathrooms: 5, daily_rate: 600, pets: false,
-                   property_type: apt, property_owner: test
+                   property_type: apt, property_owner: po_test
                 })
 

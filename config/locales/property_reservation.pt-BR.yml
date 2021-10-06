@@ -1,0 +1,10 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      property_reservation: "Reserva de Imóvel"
+    attributes:
+      property_reservation:
+        start_date: "Data de Início"
+        end_date: "Data de Término"
+        guests: "Quantidade de pessoas"
