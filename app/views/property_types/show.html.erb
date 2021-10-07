@@ -12,12 +12,18 @@
     <% if @property_type.properties.empty? %>
         <div><span>Nenhum imóvel disponível</span></div>
     <% end %>
-
-    <% @property_type.properties.each do |p| %>
-        <%# Partial Views %>
-        <%= link_to(p.title, property_path(p.id)) %>
-        <%= p.description %>
-        Quartos: <%= p.rooms %>
-        <br>
-    <% end %>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Quartos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @property_type.properties.each do |p| %>
+                <%= render p %>
+            <% end %>
+        </tbody>
+    </table>
 </main>

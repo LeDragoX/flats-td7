@@ -26,11 +26,7 @@
             </thead>
             <tbody>
                 <% @properties.each do |p| %>
-                    <tr>
-                        <td><%= link_to(p.title, property_path(p.id)) %></td>
-                        <td><%= p.description %></td>
-                        <td>Quartos: <%= p.rooms %></td>
-                    </tr>
+                    <%= render p %>
                 <% end %>
             </tbody>
         </table>
