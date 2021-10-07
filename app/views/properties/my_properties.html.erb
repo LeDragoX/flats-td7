@@ -1,5 +1,5 @@
 <header>
-    <h1>Meus Imóveis</h1>
+    <h1>🏡 Meus Imóveis</h1>
 
     <nav>
         <%= link_to('Voltar', root_path)%>
@@ -30,8 +30,9 @@
                         <td><%= link_to(p.title, property_path(p.id)) %></td>
                         <td><%= p.description %></td>
                         <td>Quartos: <%= p.rooms %></td>
-                        <td>Editar</td>
-                        <td>Deletar</td>
+                        <td><%= link_to "Editar", edit_property_path(p.id) %></td>
+                        <td><%= link_to "Deletar", property_path(p.id), method: :delete,
+                                        data: { confirm: "Quer apagar esse Imóvel?" } %></td>
                     </tr>
                 <% end %>
             </tbody>

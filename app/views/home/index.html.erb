@@ -22,7 +22,6 @@
                     <th>Título</th>
                     <th>Descrição</th>
                     <th>Quartos</th>
-                    <th colspan="2">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,8 +30,6 @@
                         <td><%= link_to(p.title, property_path(p.id)) %></td>
                         <td><%= p.description %></td>
                         <td>Quartos: <%= p.rooms %></td>
-                        <td>Editar</td>
-                        <td>Deletar</td>
                     </tr>
                 <% end %>
             </tbody>

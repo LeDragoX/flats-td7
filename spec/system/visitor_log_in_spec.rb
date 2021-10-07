@@ -40,10 +40,8 @@ describe 'Visitor log in' do
 
         end
         
-        it "and create an account" do
-            
+        it "and create an account" do 
         end
-        
     end
     
     context "as user" do

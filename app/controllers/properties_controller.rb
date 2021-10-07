@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
-    before_action :authenticate_property_owner!, only: [:new, :create]
+    before_action :authenticate_property_owner!, only: [:new, :create, :edit, :update, :destroy]
 
     def show
         @property = Property.find(params[:id])
@@ -23,6 +23,31 @@ class PropertiesController < ApplicationController
 
     def my_properties
         @properties = current_property_owner.properties
+    end
+
+    def edit
+        @property = Property.find(params[:id])
+        render :new
+    end
+
+    def update
+        @property = Property.find(params[:id])
+
+        if @property.update(property_params)
+            redirect_to @property
+        else
+            render :new
+        end
+    end
+    
+    def destroy
+        @property = Property.find(params[:id])
+
+        if @property.destroy
+            redirect_to my_properties_properties_path
+        else
+
+        end
     end
     
     private

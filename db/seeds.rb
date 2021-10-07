@@ -10,8 +10,8 @@ apt = PropertyType.create!(name: 'Apartamento')
 house = PropertyType.create!(name: 'Casa')
 sitio = PropertyType.create!(name: 'Sítio')
 
-john = PropertyOwner.create!(email: 'john@doe.com', password: '123456789')
-keanu = PropertyOwner.create!(email: 'keanu@reeves.com', password: '123456789')
+john = PropertyOwner.create!(email: 'john@doe.com', password: '123456')
+keanu = PropertyOwner.create!(email: 'keanu@reeves.com', password: '123456')
 po_test = PropertyOwner.create!({ email: 'po@test.com', password: '123456' })
 
 user_test = User.create!({ email: 'user@test.com', password: '123456' })

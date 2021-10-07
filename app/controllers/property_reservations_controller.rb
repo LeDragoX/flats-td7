@@ -8,7 +8,7 @@ class PropertyReservationsController < ApplicationController
         @property_reservation.property = Property.find(params[:property_id])
 
         if (@property_reservation.save)
-            redirect_to @property_reservation, notice: 'Pedido de reserva enviado com sucesso'
+            redirect_to @property_reservation, notice: t('.success')
         else
             render :new
         end
