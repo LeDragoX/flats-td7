@@ -1,69 +1,10 @@
 <header>
-    <h1>🏡 Edição de Imóvel (Essa página vai ser ignorada)</h1>
-
+    <h1>🏡 Edição de Imóvel</h1>
     <nav>
         <%= link_to('Voltar', root_path) %>
         <hr>
     </nav>
 </header>
 <main>
-    <%= form_with(model: @property) do |f| %>
-        <div>
-            <%= f.label :title %>
-            <%= f.text_field :title %>
-            <% @property.errors.full_messages_for(:title).each do |message| %>
-                <div class="form-error"><%= message %></div>
-            <% end %>
-        </div>
-        <div>
-            <%= f.label :description %>
-            <%= f.text_field :description %>
-            <% @property.errors.full_messages_for(:description).each do |message| %>
-                <div class="form-error"><%= message %></div>
-            <% end %>
-        </div>
-        <div>
-            <%= f.label :rooms %>
-            <%= f.number_field :rooms %>
-            <% @property.errors.full_messages_for(:rooms).each do |message| %>
-                <div class="form-error"><%= message %></div>
-            <% end %>
-        </div>
-        <div>
-            <%= f.label :bathrooms %>
-            <%= f.number_field :bathrooms %>
-            <% @property.errors.full_messages_for(:bathrooms).each do |message| %>
-                <div class="form-error"><%= message %></div>
-            <% end %>
-        </div>
-        <div>
-            <%= f.label :daily_rate %>
-            <%= f.text_field :daily_rate %>
-            <% @property.errors.full_messages_for(:daily_rate).each do |message| %>
-                <div class="form-error"><%= message %></div>
-            <% end %>
-        </div>
-        <div>
-            <%= f.label :property_type_id %>
-            <%= f.collection_select :property_type_id, PropertyType.all, :id, :name, prompt: 'Escolha um Tipo' %>
-            <% @property.errors.full_messages_for(:property_type_id).each do |message| %>
-                <div class="form-error"><%= message %></div>
-            <% end %>
-        </div>
-        <div>
-            <%= f.check_box :pets %>
-            <%= f.label :pets %>
-            <% @property.errors.full_messages_for(:pets).each do |message| %>
-                <div class="form-error"><%= message %></div>
-            <% end %>
-        </div>
-        <div>
-            <%= f.check_box :parking_slot %>
-            <%= f.label :parking_slot %>
-            <% @property.errors.full_messages_for(:parking_slot).each do |message| %>
-                <div class="form-error"><%= message %></div>
-            <% end %>
-        </div>
-        <%= f.submit "Enviar" %>
-    <% end %>
+    <%= render partial: "form" %>
 </main>
