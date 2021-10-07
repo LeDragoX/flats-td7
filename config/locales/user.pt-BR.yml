@@ -2,8 +2,8 @@
 pt-BR:
   activerecord:
     models:
-      property_owner: "Proprietário"
+      user: "Locador"
     attributes:
-      property_owner:
+      user:
         email: "E-mail"
         password: "Senha"
