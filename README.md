@@ -5,21 +5,28 @@ application up and running.
 
 Things you may want to cover:
 
+## Project Started
+
+```sh
+# Don't run this command
+╰─❯ rails new flats-td7 -T --skip-action-mailbox --skip-active-storage --skip-action-cable
+```
+
 ## Ruby version
 
 - Ruby v3.0.2 | Rails >= 6.1.4.1
 
 ## System dependencies
 
-- all rails stuff;
-- rspec-rails;
-- capybara;
+- Make sure [_Yarn_](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) is installed;
+- All Rails stuff;
+- rspec-rails - Unit tests;
+- capybara - UI tests;
 
 ## Configuration
 
 ```sh
 bundle install
-bundle update
 ```
 
 ## Database creation
@@ -30,6 +37,7 @@ bundle update
 
 ```sh
 rails db:migrate
+rails db:seed
 ```
 
 ## How to run the test suite
@@ -39,6 +47,8 @@ rspec
 ```
 
 ## Services (job queues, cache servers, search engines, etc.)
+
+> ...
 
 ## Deployment instructions
 
@@ -76,5 +86,3 @@ rails g devise:views users
 ```
 
 </details>
-
-## ...
