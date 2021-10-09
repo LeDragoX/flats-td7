@@ -6,12 +6,15 @@ class PropertyReservationsController < ApplicationController
     def create
         @property_reservation = current_user.property_reservations.new(property_reservation_params)
         @property_reservation.property = Property.find(params[:property_id])
+        @property_reservation.save
 
-        if (@property_reservation.save)
-            redirect_to @property_reservation, notice: t('.success')
-        else
-            render :new
-        end
+        redirect_to @property_reservation, notice: t('.success')
+    end
+
+    def accept
+        @property_reservation = PropertyReservation.find(params[:id])
+        @property_reservation.accepted!
+        redirect_to @property_reservation.property
     end
 
     private
