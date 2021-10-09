@@ -5,9 +5,11 @@ pt-BR:
       success: "Pedido de reserva enviado com sucesso"
   activerecord:
     models:
-      property_reservation: "Reserva de Imóvel"
+      property_reservation: "Reserva"
     attributes:
       property_reservation:
         start_date: "Data de Início"
-        end_date: "Data de Término"
+        end_date:
+          "Data de Término"
+          # greater_than_start_date: 'deve ser maior que a data início'
         guests: "Quantidade de pessoas"
