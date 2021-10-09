@@ -79,6 +79,7 @@ describe 'Visitor log in' do
             expect(page).to_not have_content(user.email)
             expect(page).to_not have_link('Logout')
             expect(page).to have_link('Entrar como Locador')
+            expect(page).to_not have_link('Cadastrar Imóvel')
         end
     end
 end
