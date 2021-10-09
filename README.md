@@ -20,8 +20,10 @@ Things you may want to cover:
 
 - Make sure [_Yarn_](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) is installed;
 - All Rails stuff;
-- rspec-rails - Unit tests;
-- capybara - UI tests;
+- rspec-rails - Unit & Web UI tests;
+- capybara - Web UI tests;
+- devise - Login & Auth manager
+- bootstrap - Automated CSS
 
 ## Configuration
 
