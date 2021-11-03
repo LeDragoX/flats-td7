@@ -22,7 +22,6 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
-
 /public/assets
 .byebug_history
 
@@ -35,3 +34,5 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+coverage/
