@@ -41,8 +41,8 @@ describe "user books property" do
         login_as user, scope: :user
         visit root_path
         click_on property.title
-        fill_in 'Data de início', with: 1.week.from_now
-        fill_in 'Data de término', with: 2.weeks.from_now
+        fill_in 'Data de Início', with: 1.week.from_now
+        fill_in 'Data de Término', with: 2.weeks.from_now
         fill_in 'Quantidade de pessoas', with: '3'
         click_on 'Enviar Reserva'
 

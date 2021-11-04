@@ -22,10 +22,11 @@ Things you may want to cover:
 - All Rails stuff;
 - rspec-rails - Unit & Web UI tests;
 - capybara - Web UI tests;
-- devise - Login & Auth manager
-- bootstrap - Automated CSS
-- simplecov - Test coverage
-- factory_bot_rails - Fast Seed/Models creation on db for Testing and Devlopment mode
+- devise - Login & Auth manager;
+- bootstrap - Automated CSS;
+- simplecov - Test coverage;
+- factory_bot_rails - Fast Seed/Models creation on db for Testing and Devlopment mode;
+- ffaker - Randomize every instance variable;
 
 ## Configuration
 
