@@ -27,6 +27,7 @@ Things you may want to cover:
 - simplecov - Test coverage;
 - factory_bot_rails - Fast Seed/Models creation on db for Testing and Devlopment mode;
 - ffaker - Randomize every instance variable;
+- rubocop/rubocop-rails - Hands up! Your code is bad. Ensure you are following your team style guide;
 
 ## Configuration
 
