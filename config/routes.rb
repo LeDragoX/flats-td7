@@ -12,4 +12,10 @@ Rails.application.routes.draw do
     end
   end
   resources :property_types, only: [:show, :new, :create]
+
+  namespace :api do
+    namespace :v1 do
+      resources :properties, only: %i[index show]
+    end
+  end
 end
