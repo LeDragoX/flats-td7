@@ -19,7 +19,7 @@ RSpec.describe PropertyReservationMailer, type: :mailer do
       expect(mail.to).to eq ['john@cena.com']
       expect(mail.from).to eq ['nao-responda@flats.com.br']
       expect(mail.subject).to eq 'Nova reserva para seu imóvel'
-      expect(mail.body).to include "Seu imóvel 'Apartamento Novo' foi reservado por andrew@doe.com.br"
+      expect(mail.body).to include "Seu imóvel <strong>'Apartamento Novo'</strong> foi reservado por andrew@doe.com.br"
     end
   end
 end
